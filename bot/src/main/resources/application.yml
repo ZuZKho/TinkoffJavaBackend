@@ -1,5 +1,5 @@
 app:
-  telegram-token: 1333
+  telegram-token: 1333232
 
 spring:
   application:
