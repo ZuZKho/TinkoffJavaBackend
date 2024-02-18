@@ -1,4 +1,4 @@
-package edu.java.bot;
+package edu.java.bot.mockdb;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -6,7 +6,10 @@ import java.util.List;
 
 public class MockDB {
 
-    private static final HashMap<Object, User> users = new HashMap<>();
+    private MockDB() {
+    }
+
+    private static HashMap<Object, User> users = new HashMap<>();
 
     public static void createUser(Object chatId) {
         if (!users.containsKey(chatId)) {
@@ -40,13 +43,3 @@ public class MockDB {
 
 }
 
-class User {
-
-    User(Object chatId, HashSet<String> links) {
-        this.chatId = chatId;
-        this.links = links;
-    }
-
-    Object chatId;
-    HashSet<String> links;
-}

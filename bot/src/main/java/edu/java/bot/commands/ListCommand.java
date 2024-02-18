@@ -2,7 +2,7 @@ package edu.java.bot.commands;
 
 import com.pengrad.telegrambot.model.Update;
 import com.pengrad.telegrambot.request.SendMessage;
-import edu.java.bot.MockDB;
+import edu.java.bot.mockdb.MockDB;
 
 public class ListCommand implements CommandInterface {
 
@@ -23,7 +23,7 @@ public class ListCommand implements CommandInterface {
             return new SendMessage(chatId, "No tracking links");
         }
 
-        for(var link : links) {
+        for (var link : links) {
             stringBuilder.append(link + "\n");
         }
 

@@ -2,7 +2,7 @@ package edu.java.bot.commands;
 
 import com.pengrad.telegrambot.model.Update;
 import com.pengrad.telegrambot.request.SendMessage;
-import edu.java.bot.MockDB;
+import edu.java.bot.mockdb.MockDB;
 
 public class UntrackCommand implements CommandInterface {
 
@@ -16,7 +16,7 @@ public class UntrackCommand implements CommandInterface {
 
     public SendMessage handle(Update update) {
         var chatId = update.message().chat().id();
-        String link = update.message().text().substring(8).trim();
+        String link = update.message().text().substring(command().length()).trim();
 
         if (link.equals("") || link.contains(" ")) {
             return new SendMessage(chatId, "Wrong arguments, send one link as argument");

@@ -12,6 +12,9 @@ import java.util.List;
 
 public class UserMessageProcessor {
 
+    private UserMessageProcessor() {
+    }
+
     public static List<? extends CommandInterface> commands() {
         return List.of(
             new HelpCommand(),
@@ -33,7 +36,6 @@ public class UserMessageProcessor {
             }
         }
 
-        var chatId = update.message().chat().id();
-        return new SendMessage(chatId, "No such command, use /help");
+        return new SendMessage(update.message().chat().id(), "No such command, use /help");
     }
 }

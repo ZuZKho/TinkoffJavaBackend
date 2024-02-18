@@ -16,7 +16,7 @@ public class HelpCommand implements CommandInterface {
 
     public SendMessage handle(Update update) {
         StringBuilder stringBuilder = new StringBuilder();
-        for(var command : UserMessageProcessor.commands()) {
+        for (var command : UserMessageProcessor.commands()) {
             stringBuilder.append(command.command() + " " + command.description() + "\n");
         }
 
