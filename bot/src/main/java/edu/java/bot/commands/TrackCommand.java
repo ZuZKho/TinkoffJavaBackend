@@ -23,7 +23,7 @@ public class TrackCommand implements CommandInterface {
         }
 
         MockDB.addLink(chatId, link);
-        return new SendMessage(update.message().chat().id(), "Link succsefully added");
+        return new SendMessage(update.message().chat().id(), "Link successfully added");
     }
 
 }

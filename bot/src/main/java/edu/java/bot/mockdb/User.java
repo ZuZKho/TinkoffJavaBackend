@@ -10,5 +10,5 @@ class User {
     }
 
     Object chatId;
-    HashSet<String> links;
+    public HashSet<String> links;
 }
