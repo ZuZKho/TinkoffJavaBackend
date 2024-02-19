@@ -160,4 +160,15 @@ class UserMessageProcessorTest {
         assertEquals(expected.getParameters(), sendMessage.getParameters());
     }
 
+    @Order(12)
+    @Test
+    void HelpTest() {
+        Mockito.when(message.chat().id()).thenReturn((long) 1);
+        Mockito.when(message.text()).thenReturn("/help");
+
+        SendMessage sendMessage = UserMessageProcessor.process(update);
+
+        assertEquals((long)1, sendMessage.getParameters().get("chat_id"));
+    }
+
 }
