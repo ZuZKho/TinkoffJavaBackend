@@ -1,0 +1,36 @@
+{
+    "items": [
+        {
+            "tags": [
+                "java",
+                "android",
+                "opengl-es",
+                "textures",
+                "augmented-reality"
+            ],
+            "owner": {
+                "account_id": 8245965,
+                "reputation": 2361,
+                "user_id": 6202039,
+                "user_type": "registered",
+                "profile_image": "https://lh6.googleusercontent.com/-8cVei5pidZQ/AAAAAAAAAAI/AAAAAAAAAJo/ShhF34Rlg2s/photo.jpg?sz=256",
+                "display_name": "Jay Patel",
+                "link": "https://stackoverflow.com/users/6202039/jay-patel"
+            },
+            "is_answered": false,
+            "view_count": 1574,
+            "answer_count": 1,
+            "score": 2,
+            "last_activity_date": 1528482125,
+            "creation_date": 1527743911,
+            "last_edit_date": 1527763627,
+            "question_id": 50617120,
+            "content_license": "CC BY-SA 4.0",
+            "link": "https://stackoverflow.com/questions/50617120/how-to-write-text-or-put-image-on-top-of-3d-cube-in-opengl-java-in-android-obje",
+            "title": "How to write text or put image on top of 3D cube in OpenGL java in android (Object is used in Augmenting Purpose)"
+        }
+    ],
+    "has_more": false,
+    "quota_max": 300,
+    "quota_remaining": 290
+}
