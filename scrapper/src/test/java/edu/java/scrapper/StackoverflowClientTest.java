@@ -18,7 +18,7 @@ public class StackoverflowClientTest {
     void test() throws IOException {
         WireMockServer wireMockServer = new WireMockServer();
         wireMockServer.start();
-        WireMock.configureFor("localhost", 8080);
+        WireMock.configureFor("localhost", wireMockServer.port());
         WireMock.stubFor(WireMock.get(urlEqualTo("/questions/50617120?site=stackoverflow.com")).willReturn(aResponse()
             .withHeader("Content-Type", "application/json")
             .withBody(Files.readString(Paths.get("src/test/resources/stackoverflowQuestionResponse.json")))));
