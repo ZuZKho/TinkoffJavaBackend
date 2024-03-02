@@ -18,7 +18,7 @@ public class GithubClientTest {
     void test() throws IOException {
         WireMockServer wireMockServer = new WireMockServer();
         wireMockServer.start();
-        WireMock.configureFor("localhost", wireMockServer.port());
+      //  WireMock.configureFor("localhost", wireMockServer.port());
         WireMock.stubFor(WireMock.get(urlEqualTo("/repos/ZuZKho/OOP")).willReturn(aResponse()
             .withHeader("Content-Type", "application/json")
             .withBody(Files.readString(Paths.get("src/test/resources/githubRepoResponse.json")))));
@@ -33,5 +33,7 @@ public class GithubClientTest {
                 Assertions.assertEquals("2023-09-05T10:00:22Z", response.getCreatedAt().toString());
             })
             .verifyComplete();
+
+        wireMockServer.stop();
     }
 }
