@@ -160,7 +160,6 @@ class UserMessageProcessorTest {
         assertEquals(expected.getParameters(), sendMessage.getParameters());
     }
 
-    @Order(12)
     @Test
     void HelpTest() {
         Mockito.when(message.chat().id()).thenReturn((long) 1);
